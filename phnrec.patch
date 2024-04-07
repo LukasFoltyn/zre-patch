@@ -1,0 +1,541 @@
+Binary files PhnRec/STKLib/Error.o and proj/PhnRec/STKLib/Error.o differ
+diff --color -ruN PhnRec/STKLib/Makefile.lin proj/PhnRec/STKLib/Makefile.lin
+--- PhnRec/STKLib/Makefile.lin	2024-03-03 06:16:56
++++ proj/PhnRec/STKLib/Makefile.lin	2006-03-10 17:02:22
+@@ -17,8 +17,8 @@
+ # compiler binary
+ # CROSS_COMPILE ?= x86_64-linux-
+ 
+-CC  := $(CROSS_COMPILE)g++
+-#CXX := $(CROSS_COMPILE)g++-4.1
++CC  := $(CROSS_COMPILE)g++-4.1
++CXX := $(CROSS_COMPILE)g++-4.1
+ 
+ 
+ ###############################################################################
+Binary files PhnRec/STKLib/Matrix.o and proj/PhnRec/STKLib/Matrix.o differ
+diff --color -ruN PhnRec/STKLib/Models.cc proj/PhnRec/STKLib/Models.cc
+--- PhnRec/STKLib/Models.cc	2024-03-03 06:07:12
++++ proj/PhnRec/STKLib/Models.cc	2006-03-10 17:02:22
+@@ -1282,7 +1282,7 @@
+   
+     if (mask & MTM_HMM && !(mask & MTM_PRESCAN)) 
+     {
+-      if (n > 0) chptr = 0;
++      if (n > 0) chptr = '\0';
+       action(mt_hmm, nodeName, this, pUserData);
+     }
+   }
+@@ -1562,7 +1562,7 @@
+     }
+   
+     if (mask & MTM_MIXTURE && !(mask & MTM_PRESCAN)) {
+-      if (n > 0) chptr = 0;
++      if (n > 0) chptr = '\0';
+       action(mt_mixture, nodeName, this, pUserData);
+     }
+   }
+@@ -2075,7 +2075,7 @@
+     }
+     if (mask & MTM_STATE && !(mask & MTM_PRESCAN)) 
+     {
+-      if (n > 0) chptr = 0;
++      if (n > 0) chptr = '\0';
+       action(mt_state, nodeName, this, pUserData);
+     }
+   }
+@@ -2199,7 +2199,7 @@
+     }
+     
+     if (mask & MTM_XFORM_INSTANCE && !(mask & MTM_PRESCAN)) {
+-      if (n > 0) chptr = 0;
++      if (n > 0) chptr = '\0';
+       action(mt_XformInstance, nodeName, this, pUserData);
+     }
+   }
+@@ -2255,7 +2255,7 @@
+     if (!(mask & MTM_PRESCAN)) 
+     {
+       if (n > 0) 
+-        chptr = 0;
++        chptr = '\0';
+         
+       action(mt_Xform, nodeName, this, pUserData);
+     }
+Binary files PhnRec/STKLib/Models.o and proj/PhnRec/STKLib/Models.o differ
+Binary files PhnRec/STKLib/Models_IO.o and proj/PhnRec/STKLib/Models_IO.o differ
+Binary files PhnRec/STKLib/Net.o and proj/PhnRec/STKLib/Net.o differ
+Binary files PhnRec/STKLib/Net_IO.o and proj/PhnRec/STKLib/Net_IO.o differ
+Binary files PhnRec/STKLib/Viterbi.o and proj/PhnRec/STKLib/Viterbi.o differ
+diff --color -ruN PhnRec/STKLib/common.C proj/PhnRec/STKLib/common.C
+--- PhnRec/STKLib/common.C	2024-03-02 09:37:40
++++ proj/PhnRec/STKLib/common.C	2006-03-10 16:05:34
+@@ -26,7 +26,6 @@
+ #include <iostream>
+ 
+ #include <string>
+-#include <cstring>
+ 
+ 
+ static union
+@@ -1200,7 +1199,7 @@
+       }
+       if (opt == 'A') continue;
+   
+-      chptr = strstr((char*)pOptionMapping, tstr);
++      chptr = strstr(pOptionMapping, tstr);
+       if (chptr == NULL) Error("Invalid command line option '-%c'", opt);
+   
+       chptr += 3;
+diff --color -ruN PhnRec/STKLib/common.h proj/PhnRec/STKLib/common.h
+--- PhnRec/STKLib/common.h	2024-03-02 09:33:54
++++ proj/PhnRec/STKLib/common.h	2006-03-10 16:05:34
+@@ -36,7 +36,6 @@
+ #endif
+ 
+ #include <string>
+-#include <cstring>
+ 
+ 
+ /* Alignment of critical dynamic data structure
+Binary files PhnRec/STKLib/common.o and proj/PhnRec/STKLib/common.o differ
+Binary files PhnRec/STKLib/dict.o and proj/PhnRec/STKLib/dict.o differ
+diff --color -ruN PhnRec/STKLib/fileio.C proj/PhnRec/STKLib/fileio.C
+--- PhnRec/STKLib/fileio.C	2024-03-03 06:05:42
++++ proj/PhnRec/STKLib/fileio.C	2006-03-05 14:42:40
+@@ -202,7 +202,7 @@
+     char          dir_name[260];
+     char *        chptr;
+   
+-    if ((chptr=strrchr((char*)pFileName, '/')) == NULL)
++    if ((chptr=strrchr(pFileName, '/')) == NULL)
+       return 0;
+     
+     
+Binary files PhnRec/STKLib/fileio.o and proj/PhnRec/STKLib/fileio.o differ
+Binary files PhnRec/STKLib/filmatch.o and proj/PhnRec/STKLib/filmatch.o differ
+Binary files PhnRec/STKLib/labels.o and proj/PhnRec/STKLib/labels.o differ
+Binary files PhnRec/STKLib/libSTKLib.a and proj/PhnRec/STKLib/libSTKLib.a differ
+Binary files PhnRec/alaw.o and proj/PhnRec/alaw.o differ
+Binary files PhnRec/atlas.dll and proj/PhnRec/atlas.dll differ
+diff --color -ruN PhnRec/configz.cpp proj/PhnRec/configz.cpp
+--- PhnRec/configz.cpp	2024-03-02 09:30:18
++++ proj/PhnRec/configz.cpp	2009-08-06 00:36:28
+@@ -14,7 +14,6 @@
+ #include <stdio.h>
+ #include <assert.h>
+ #include "configz.h"
+-#include <cstring>
+ 
+ Config::Config() :
+         variables(0),
+Binary files PhnRec/configz.o and proj/PhnRec/configz.o differ
+Binary files PhnRec/decoder.o and proj/PhnRec/decoder.o differ
+Binary files PhnRec/dspc.o and proj/PhnRec/dspc.o differ
+Binary files PhnRec/encode.o and proj/PhnRec/encode.o differ
+Binary files PhnRec/filename.o and proj/PhnRec/filename.o differ
+diff --color -ruN PhnRec/fsm.cpp proj/PhnRec/fsm.cpp
+--- PhnRec/fsm.cpp	2024-03-02 09:35:40
++++ proj/PhnRec/fsm.cpp	2009-08-06 00:36:25
+@@ -21,7 +21,7 @@
+ #include "fsm.h"
+ 
+ // definition of INFINITY
+-unsigned char fsm_infinity_bytes[] = {0x00, 0x00, 0x80, 0x7F};
++char fsm_infinity_bytes[] = {0x00, 0x00, 0x80, 0x7F};
+ 
+ FSM::FSM() :
+ 	isTransducer(false),
+diff --color -ruN PhnRec/fsm.h proj/PhnRec/fsm.h
+--- PhnRec/fsm.h	2024-03-02 09:35:52
++++ proj/PhnRec/fsm.h	2009-08-06 00:36:29
+@@ -44,7 +44,7 @@
+ #define DEFAULT_ARC_CACHE           1000
+ 
+ //#ifndef INFINITY
+-extern unsigned char fsm_infinity_bytes[];
++extern char fsm_infinity_bytes[];
+ #define FSM_INFINITY *((float *)fsm_infinity_bytes) 
+ //#endif
+ 
+Binary files PhnRec/fsm.o and proj/PhnRec/fsm.o differ
+Binary files PhnRec/fsmcache.o and proj/PhnRec/fsmcache.o differ
+Binary files PhnRec/getopt.o and proj/PhnRec/getopt.o differ
+diff --color -ruN PhnRec/gptrans.h proj/PhnRec/gptrans.h
+--- PhnRec/gptrans.h	2024-03-02 09:33:08
++++ proj/PhnRec/gptrans.h	2009-08-06 00:36:25
+@@ -16,7 +16,6 @@
+ 
+ #include <list>
+ #include <string>
+-#include <cstring>
+ #include <map>
+ #include <set>
+ #include "fsm.h"
+Binary files PhnRec/gptrans.o and proj/PhnRec/gptrans.o differ
+diff --color -ruN PhnRec/kwsnetg.cpp proj/PhnRec/kwsnetg.cpp
+--- PhnRec/kwsnetg.cpp	2024-03-02 09:31:12
++++ proj/PhnRec/kwsnetg.cpp	2009-08-06 00:36:25
+@@ -16,7 +16,6 @@
+ #include "encode.h"
+ #include <stdlib.h>
+ #include <assert.h>
+-#include <cstring>
+ 
+ KWSNetGenerator::KWSNetGenerator() :
+ 		PT(0),
+@@ -145,16 +144,16 @@
+ void KWSNetGenerator::WriteNode(FILE *fp, int node_id, char *type, char *word, char *flag)
+ {
+ // old format - fprintf(fp, "%d\t%s\t%-8s\t%s\t\t\t", node_id, type, word, out_sym);
+-	fprintf(fp, "%d\t%s=%-12s\t", node_id, type, word);
+-	if(strlen(flag) != 0)
+-	{
+-		fprintf(fp, "f=%s\t", flag);
+-	}
+-	else
+-	{
+-		fprintf(fp, "\t");
+-	}
+-//	fprintf(fp, "%d\t%s\t%-8s\t%s\t\t\t", node_id, type, word, out_sym);
++	fprintf(fp, "%d\t%s=%-12s\t", node_id, type, word);
++	if(strlen(flag) != 0)
++	{
++		fprintf(fp, "f=%s\t", flag);
++	}
++	else
++	{
++		fprintf(fp, "\t");
++	}
++//	fprintf(fp, "%d\t%s\t%-8s\t%s\t\t\t", node_id, type, word, out_sym);
+ }
+ 
+ void KWSNetGenerator::WriteArcs(FILE *fp, std::map<int, float> *arcs)
+@@ -252,11 +251,11 @@
+ 	// 3 ~ phone loop null node
+ 	fprintf(fp, "\n#PhnLoop\n");
+ 	WriteNode(fp, node_id++, "W", "!NULL", "");
+-	int i;
++	int i;
+ 	for(i = 0; i < nPhonemes; i++)
+-	{
++	{
+ 		arcs[i + node_id] = 0.0f;        // arcs to phonemes
+-	}
++	}
+ 	arcs[node_id + nPhonemes] = 0.0f;    // arc to the word start node
+ 	arcs[2] = 0.0f;                      // arc to the sticky background node 
+ 	WriteArcs(fp, &arcs);
+@@ -273,13 +272,13 @@
+ 	// links to word starts
+ 	fprintf(fp, "\n#links to word start nodes\n");
+ 	WriteNode(fp, node_id++, "W", "!NULL", "");
+-	for(i = 0; i < nWords; i++)
+-	{
+-		arcs[node_id + i] = 0.0f;
+-	}		
+-	WriteArcs(fp, &arcs);
+-	
+-/*	std::map<int, float> arcs_wstart;	
++	for(i = 0; i < nWords; i++)
++	{
++		arcs[node_id + i] = 0.0f;
++	}		
++	WriteArcs(fp, &arcs);
++	
++/*	std::map<int, float> arcs_wstart;	
+ 	// - links
+ 	for(it = wordSet->begin(); it != wordSet->end(); it++)
+ 	{
+@@ -296,34 +295,34 @@
+ 			idx += len;
+ 		}
+ 	}
+-*/
+-  
++*/
++  
+ 	//WriteArcs(fp, &arcs);
+-
+-	// word start nodes
+-	fprintf(fp, "\n#word start nodes\n");
+-	int idx = node_id + 2 * nWords;
+-	for(it = wordSet->begin(); it != wordSet->end(); it++)
+-	{
+-		char pbuff[256];
+-		sprintf(pbuff, "%s_B", (char *)it->c_str());
+-		WriteNode(fp, node_id++, "W", pbuff, "");
+-        
+-		std::list<PhnTrans::pt_entry> list;
+-        std::list<PhnTrans::pt_entry>::iterator itt;
+-
+-		char *word = (char *)(*it).c_str();
+-        PT->GetTranscs(word, &list);
+-        for(itt = list.begin(); itt != list.end(); itt++)
+-        {
+-			arcs[idx] = 0.0f;
+-			int len = GetTranscLen((char *)itt->trans.c_str());
+-			idx += len;
+-		}
+-
+-		//arcs[1] = 0.0f;
+-		WriteArcs(fp, &arcs);
+-	}
++
++	// word start nodes
++	fprintf(fp, "\n#word start nodes\n");
++	int idx = node_id + 2 * nWords;
++	for(it = wordSet->begin(); it != wordSet->end(); it++)
++	{
++		char pbuff[256];
++		sprintf(pbuff, "%s_B", (char *)it->c_str());
++		WriteNode(fp, node_id++, "W", pbuff, "");
++        
++		std::list<PhnTrans::pt_entry> list;
++        std::list<PhnTrans::pt_entry>::iterator itt;
++
++		char *word = (char *)(*it).c_str();
++        PT->GetTranscs(word, &list);
++        for(itt = list.begin(); itt != list.end(); itt++)
++        {
++			arcs[idx] = 0.0f;
++			int len = GetTranscLen((char *)itt->trans.c_str());
++			idx += len;
++		}
++
++		//arcs[1] = 0.0f;
++		WriteArcs(fp, &arcs);
++	}
+ 
+ 	// word end nodes
+ 	fprintf(fp, "\n#word end nodes\n");
+diff --color -ruN PhnRec/kwsnetg.h proj/PhnRec/kwsnetg.h
+--- PhnRec/kwsnetg.h	2024-03-02 09:31:50
++++ proj/PhnRec/kwsnetg.h	2009-08-06 00:36:26
+@@ -16,7 +16,6 @@
+ 
+ #include <stdio.h>
+ #include <string>
+-#include <climits>
+ #include "phntrans.h"
+ 
+ // error codes
+Binary files PhnRec/kwsnetg.o and proj/PhnRec/kwsnetg.o differ
+diff --color -ruN PhnRec/lexicon.cpp proj/PhnRec/lexicon.cpp
+--- PhnRec/lexicon.cpp	2024-03-02 09:32:50
++++ proj/PhnRec/lexicon.cpp	2009-08-06 00:36:25
+@@ -15,7 +15,6 @@
+ #include "lexicon.h"
+ #include "filename.h"
+ #include "encode.h"
+-#include <cstring>
+ 
+ Lexicon::Lexicon() :
+         strtok_buff(0),
+diff --color -ruN PhnRec/lexicon.h proj/PhnRec/lexicon.h
+--- PhnRec/lexicon.h	2024-03-02 09:32:54
++++ proj/PhnRec/lexicon.h	2009-08-06 00:36:28
+@@ -18,7 +18,6 @@
+ #include <list>
+ #include <map>
+ #include <set>
+-#include <climits>
+ 
+ // error codes
+ #define LEX_OK             0
+Binary files PhnRec/lexicon.o and proj/PhnRec/lexicon.o differ
+Binary files PhnRec/lwfsource.o and proj/PhnRec/lwfsource.o differ
+diff --color -ruN PhnRec/makefile.lin proj/PhnRec/makefile.lin
+--- PhnRec/makefile.lin	2024-03-03 06:17:18
++++ proj/PhnRec/makefile.lin	2009-08-06 01:07:35
+@@ -9,14 +9,14 @@
+ 
+ ###############################################################################
+ # compiler options
+-CFLAGS = -m64 -g -DUSE_BLAS -DDOUBLEPRECISION=0 -D_REENTRANT -I . -I$(STKINCL) -I$(STKINCL)\\gnu \
++CFLAGS = -g -DUSE_BLAS -DDOUBLEPRECISION=0 -D_REENTRANT -I . -I$(STKINCL) -I$(STKINCL)\\gnu \
+          -D NN_FAST_EXP -O2 -L$(STKLIB)
+ CXXFLAGS = $(CFLAGS)
+ 
+ ###############################################################################
+ # linker options
+ LDFLAGS = -L$(STKLIB)
+-LDLIBS = -lm -lSTKLib -l pthread -l cblas -l atlas
++LDLIBS = -lSTKLib -l pthread -l cblas -l atlas
+ 
+ 
+ ###############################################################################
+@@ -24,7 +24,7 @@
+ # CROSS_COMPILE ?= x86_64-linux-
+ 
+ CC  := $(CROSS_COMPILE)g++
+-#CXX := $(CROSS_COMPILE)g++
++CXX := $(CROSS_COMPILE)g++
+ 
+ 
+ DLLTOOL=dlltool
+diff --color -ruN PhnRec/makefile_phnrec.lin proj/PhnRec/makefile_phnrec.lin
+--- PhnRec/makefile_phnrec.lin	2024-03-01 17:51:30
++++ proj/PhnRec/makefile_phnrec.lin	2009-08-06 01:06:36
+@@ -20,8 +20,8 @@
+ # compiler binary
+ # CROSS_COMPILE ?= x86_64-linux-
+ 
+-#CC  = $(CROSS_COMPILE)g++
+-#CXX = $(CROSS_COMPILE)g++
++CC  = $(CROSS_COMPILE)g++
++CXX = $(CROSS_COMPILE)g++
+ 
+ 
+ O_FILES   = melbanks.o \
+Binary files PhnRec/melbanks.o and proj/PhnRec/melbanks.o differ
+Binary files PhnRec/myrand.o and proj/PhnRec/myrand.o differ
+diff --color -ruN PhnRec/netgen.cpp proj/PhnRec/netgen.cpp
+--- PhnRec/netgen.cpp	2024-03-02 09:30:56
++++ proj/PhnRec/netgen.cpp	2009-08-06 00:36:25
+@@ -14,7 +14,6 @@
+ #include <stdio.h>
+ #include <assert.h>
+ #include <string>
+-#include <cstring>
+ #include <list>
+ 
+ #include "netgen.h"
+Binary files PhnRec/netgen.o and proj/PhnRec/netgen.o differ
+diff --color -ruN PhnRec/nn.cpp proj/PhnRec/nn.cpp
+--- PhnRec/nn.cpp	2024-03-02 09:24:24
++++ proj/PhnRec/nn.cpp	2009-08-06 00:36:25
+@@ -46,7 +46,7 @@
+ char *NeuralNet::SkipSpaces(char *pText)
+ {
+    char *pt = pText;
+-   while(pt != 0 && strchr(" \t\n\r", *pt) != 0)
++   while(pt != '\0' && strchr(" \t\n\r", *pt) != 0)
+    {
+       pt++;
+    }
+@@ -56,7 +56,7 @@
+ char *NeuralNet::SkipText(char *pText)
+ {
+    char *pt = pText;
+-   while(pt != 0 && strchr(" \t\n\r", *pt) == 0)
++   while(pt != '\0' && strchr(" \t\n\r", *pt) == 0)
+    {
+       pt++;
+    }
+@@ -67,7 +67,7 @@
+ {
+    char *pt = pText;
+    int line = 0;
+-   while(pt != 0 && line != n)
++   while(pt != '\0' && line != n)
+    {
+       if(*pt == '\n')
+       {
+@@ -76,7 +76,7 @@
+       pt++;
+    }
+    
+-   if(pt == 0 && line != n)
++   if(pt == '\0' && line != n)
+    {
+       return 0;
+    }
+@@ -623,7 +623,7 @@
+ float *NeuralNet::MemAlign16(float *pBuff)
+ {
+    char *pbuff = (char *)pBuff;
+-   while(((size_t)pbuff & 0xF) != 0)
++   while(((unsigned int)pbuff & 0xF) != 0)
+    {
+       pbuff++;
+    }
+@@ -955,7 +955,7 @@
+    char *pt = pText;
+    int i = 0;
+    pt = SkipSpaces(pt);
+-   while(pt != 0 && i < 100 && strchr(" \t\n\r", pt[i]) == 0)
++   while(pt != '\0' && i < 100 && strchr(" \t\n\r", pt[i]) == 0)
+    {
+       pbuff[i] = pt[i];
+       i++;
+@@ -970,7 +970,7 @@
+    char *pt = pText;
+    int i = 0;
+    pt = SkipSpaces(pt);
+-   while(pt != 0 && i < 100 && strchr(" \t\n\r", pt[i]) == 0)
++   while(pt != '\0' && i < 100 && strchr(" \t\n\r", pt[i]) == 0)
+    {
+       pbuff[i] = pt[i];
+       i++;
+Binary files PhnRec/nn.o and proj/PhnRec/nn.o differ
+diff --color -ruN PhnRec/norm.h proj/PhnRec/norm.h
+--- PhnRec/norm.h	2024-03-02 09:36:30
++++ proj/PhnRec/norm.h	2009-08-06 00:36:28
+@@ -2,8 +2,6 @@
+ #define _NORM_H
+ 
+ #include <map>
+-#include <cstring>
+-#include <climits>
+ 
+ // normalization kinds
+ #define NK_NONE      0
+Binary files PhnRec/norm.o and proj/PhnRec/norm.o differ
+Binary files PhnRec/phndec.o and proj/PhnRec/phndec.o differ
+Binary files PhnRec/phnrec and proj/PhnRec/phnrec differ
+diff --color -ruN PhnRec/phnrec.cpp proj/PhnRec/phnrec.cpp
+--- PhnRec/phnrec.cpp	2024-03-02 08:54:18
++++ proj/PhnRec/phnrec.cpp	2009-08-06 00:36:27
+@@ -110,7 +110,7 @@
+ }
+ 
+ 
+-int main(int argc, char * const argv[])
++int main(int argc, char *argv[])
+ {
+ 	char *config_dir = 0;
+ 	char *file_list = 0;
+Binary files PhnRec/phnrec.exe and proj/PhnRec/phnrec.exe differ
+Binary files PhnRec/phnrec.o and proj/PhnRec/phnrec.o differ
+Binary files PhnRec/phntrans.o and proj/PhnRec/phntrans.o differ
+diff --color -ruN PhnRec/phntranscheck.h proj/PhnRec/phntranscheck.h
+--- PhnRec/phntranscheck.h	2024-03-02 09:36:04
++++ proj/PhnRec/phntranscheck.h	2009-08-06 00:36:26
+@@ -15,7 +15,6 @@
+ #define _PHNTRANSCHECK_H
+ 
+ #include <string>
+-#include <cstring>
+ #include <set>
+ 
+ #define PTCE_OK        0
+Binary files PhnRec/phntranscheck.o and proj/PhnRec/phntranscheck.o differ
+Binary files PhnRec/plp.o and proj/PhnRec/plp.o differ
+Binary files PhnRec/srec.o and proj/PhnRec/srec.o differ
+Binary files PhnRec/stkinterface.o and proj/PhnRec/stkinterface.o differ
+diff --color -ruN PhnRec/sxmlparser.h proj/PhnRec/sxmlparser.h
+--- PhnRec/sxmlparser.h	2024-03-02 09:36:44
++++ proj/PhnRec/sxmlparser.h	2009-08-06 00:59:30
+@@ -5,7 +5,6 @@
+ #include <map>
+ #include <list>
+ #include <string>
+-#include <cstring>
+ 
+ // kinds of text outputs 
+ #ifndef  TO_CONSTANTS
+Binary files PhnRec/sxmlparser.o and proj/PhnRec/sxmlparser.o differ
+diff --color -ruN PhnRec/thresholds.cpp proj/PhnRec/thresholds.cpp
+--- PhnRec/thresholds.cpp	2024-03-02 09:32:04
++++ proj/PhnRec/thresholds.cpp	2009-08-06 00:36:26
+@@ -13,7 +13,6 @@
+ 
+ #include <stdio.h>
+ #include "thresholds.h"
+-#include <cstring>
+ 
+ 
+ Thresholds::Thresholds() :
+Binary files PhnRec/thresholds.o and proj/PhnRec/thresholds.o differ
+Binary files PhnRec/traps.o and proj/PhnRec/traps.o differ
