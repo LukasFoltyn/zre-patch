@@ -14,18 +14,18 @@ item []:
         intervals: size = 13 
         intervals [1]:
             xmin = 0.0 
-            xmax = 1.75 
+            xmax = 1.72 
             text = "" 
         intervals [2]:
-            xmin = 1.75 
+            xmin = 1.72 
             xmax = 1.92 
             text = "já" 
         intervals [3]:
             xmin = 1.92 
-            xmax = 2.28 
+            xmax = 2.32 
             text = "už" 
         intervals [4]:
-            xmin = 2.28 
+            xmin = 2.32 
             xmax = 2.51 
             text = "jsem" 
         intervals [5]:
@@ -50,18 +50,18 @@ item []:
             text = "se" 
         intervals [10]:
             xmin = 3.75 
-            xmax = 3.93 
+            xmax = 3.94 
             text = "mnou" 
         intervals [11]:
-            xmin = 3.93 
+            xmin = 3.94 
             xmax = 4.26 
             text = "byste" 
         intervals [12]:
             xmin = 4.26 
-            xmax = 4.8 
+            xmax = 4.79 
             text = "neužila" 
         intervals [13]:
-            xmin = 4.8 
+            xmin = 4.79 
             xmax = 5.6875 
             text = "" 
     item [2]:
@@ -72,10 +72,10 @@ item []:
         intervals: size = 34 
         intervals [1]:
             xmin = 0.0 
-            xmax = 1.75 
+            xmax = 1.72 
             text = "" 
         intervals [2]:
-            xmin = 1.75 
+            xmin = 1.72 
             xmax = 1.85 
             text = "j" 
         intervals [3]:
@@ -88,14 +88,14 @@ item []:
             text = "u" 
         intervals [5]:
             xmin = 2.09 
-            xmax = 2.28 
+            xmax = 2.32 
             text = "ʃ" 
         intervals [6]:
-            xmin = 2.28 
-            xmax = 2.29 
+            xmin = 2.32 
+            xmax = 2.33 
             text = "j" 
         intervals [7]:
-            xmin = 2.29 
+            xmin = 2.33 
             xmax = 2.39 
             text = "s" 
         intervals [8]:
@@ -180,10 +180,10 @@ item []:
             text = "n" 
         intervals [28]:
             xmin = 3.87 
-            xmax = 3.93 
+            xmax = 3.94 
             text = "ow" 
         intervals [29]:
-            xmin = 3.93 
+            xmin = 3.94 
             xmax = 4.01 
             text = "b" 
         intervals [30]:

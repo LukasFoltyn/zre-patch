@@ -22,14 +22,14 @@ item []:
             text = "jednou" 
         intervals [3]:
             xmin = 1.45 
-            xmax = 1.88 
+            xmax = 1.87 
             text = "náhradní" 
         intervals [4]:
-            xmin = 1.88 
-            xmax = 2.49 
+            xmin = 1.87 
+            xmax = 2.51 
             text = "pneumatiku" 
         intervals [5]:
-            xmin = 2.49 
+            xmin = 2.51 
             xmax = 2.63 
             text = "už" 
         intervals [6]:
@@ -64,10 +64,10 @@ item []:
             text = "d" 
         intervals [5]:
             xmin = 1.3 
-            xmax = 1.36 
+            xmax = 1.35 
             text = "n" 
         intervals [6]:
-            xmin = 1.36 
+            xmin = 1.35 
             xmax = 1.45 
             text = "ow" 
         intervals [7]:
@@ -100,14 +100,14 @@ item []:
             text = "ɲ" 
         intervals [14]:
             xmin = 1.84 
-            xmax = 1.88 
+            xmax = 1.87 
             text = "iː" 
         intervals [15]:
-            xmin = 1.88 
-            xmax = 2.49 
+            xmin = 1.87 
+            xmax = 2.51 
             text = "" 
         intervals [16]:
-            xmin = 2.49 
+            xmin = 2.51 
             xmax = 2.56 
             text = "u" 
         intervals [17]:

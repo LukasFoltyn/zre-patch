@@ -30,10 +30,10 @@ item []:
             text = "nemluvím" 
         intervals [5]:
             xmin = 2.51 
-            xmax = 2.55 
+            xmax = 2.54 
             text = "" 
         intervals [6]:
-            xmin = 2.55 
+            xmin = 2.54 
             xmax = 2.62 
             text = "o" 
         intervals [7]:
@@ -46,10 +46,10 @@ item []:
             text = "vyšší" 
         intervals [9]:
             xmin = 3.17 
-            xmax = 3.49 
+            xmax = 3.5 
             text = "ceně" 
         intervals [10]:
-            xmin = 3.49 
+            xmin = 3.5 
             xmax = 4.1 
             text = "podzemního" 
         intervals [11]:
@@ -116,10 +116,10 @@ item []:
             text = "m" 
         intervals [13]:
             xmin = 2.51 
-            xmax = 2.55 
+            xmax = 2.54 
             text = "" 
         intervals [14]:
-            xmin = 2.55 
+            xmin = 2.54 
             xmax = 2.62 
             text = "o" 
         intervals [15]:
@@ -176,10 +176,10 @@ item []:
             text = "ɲ" 
         intervals [28]:
             xmin = 3.44 
-            xmax = 3.49 
+            xmax = 3.5 
             text = "ɛ" 
         intervals [29]:
-            xmin = 3.49 
+            xmin = 3.5 
             xmax = 3.6 
             text = "p" 
         intervals [30]:
@@ -224,10 +224,10 @@ item []:
             text = "u" 
         intervals [40]:
             xmin = 4.2 
-            xmax = 4.26 
+            xmax = 4.31 
             text = "l" 
         intervals [41]:
-            xmin = 4.26 
+            xmin = 4.31 
             xmax = 4.34 
             text = "o" 
         intervals [42]:

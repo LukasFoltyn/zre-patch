@@ -14,14 +14,14 @@ item []:
         intervals: size = 7 
         intervals [1]:
             xmin = 0.0 
-            xmax = 1.64 
+            xmax = 1.65 
             text = "" 
         intervals [2]:
-            xmin = 1.64 
-            xmax = 1.8 
+            xmin = 1.65 
+            xmax = 1.81 
             text = "byl" 
         intervals [3]:
-            xmin = 1.8 
+            xmin = 1.81 
             xmax = 1.93 
             text = "to" 
         intervals [4]:
@@ -48,10 +48,10 @@ item []:
         intervals: size = 27 
         intervals [1]:
             xmin = 0.0 
-            xmax = 1.64 
+            xmax = 1.65 
             text = "" 
         intervals [2]:
-            xmin = 1.64 
+            xmin = 1.65 
             xmax = 1.71 
             text = "b" 
         intervals [3]:
@@ -60,10 +60,10 @@ item []:
             text = "ɪ" 
         intervals [4]:
             xmin = 1.76 
-            xmax = 1.8 
+            xmax = 1.81 
             text = "l" 
         intervals [5]:
-            xmin = 1.8 
+            xmin = 1.81 
             xmax = 1.88 
             text = "t" 
         intervals [6]:

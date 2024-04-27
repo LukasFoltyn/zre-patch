@@ -30,22 +30,22 @@ item []:
             text = "" 
         intervals [5]:
             xmin = 2.24 
-            xmax = 3.23 
+            xmax = 3.24 
             text = "vyžadovány" 
         intervals [6]:
-            xmin = 3.23 
-            xmax = 3.29 
+            xmin = 3.24 
+            xmax = 3.3 
             text = "" 
         intervals [7]:
-            xmin = 3.29 
-            xmax = 3.59 
+            xmin = 3.3 
+            xmax = 3.6 
             text = "nové" 
         intervals [8]:
-            xmin = 3.59 
-            xmax = 3.71 
+            xmin = 3.6 
+            xmax = 3.7 
             text = "a" 
         intervals [9]:
-            xmin = 3.71 
+            xmin = 3.7 
             xmax = 3.95 
             text = "nové" 
         intervals [10]:
@@ -152,14 +152,14 @@ item []:
             text = "n" 
         intervals [23]:
             xmin = 3.12 
-            xmax = 3.23 
+            xmax = 3.24 
             text = "ɪ" 
         intervals [24]:
-            xmin = 3.23 
-            xmax = 3.29 
+            xmin = 3.24 
+            xmax = 3.3 
             text = "" 
         intervals [25]:
-            xmin = 3.29 
+            xmin = 3.3 
             xmax = 3.4 
             text = "n" 
         intervals [26]:
@@ -172,22 +172,22 @@ item []:
             text = "v" 
         intervals [28]:
             xmin = 3.55 
-            xmax = 3.59 
+            xmax = 3.6 
             text = "ɛː" 
         intervals [29]:
-            xmin = 3.59 
-            xmax = 3.71 
+            xmin = 3.6 
+            xmax = 3.7 
             text = "a" 
         intervals [30]:
-            xmin = 3.71 
+            xmin = 3.7 
             xmax = 3.78 
             text = "n" 
         intervals [31]:
             xmin = 3.78 
-            xmax = 3.84 
+            xmax = 3.85 
             text = "o" 
         intervals [32]:
-            xmin = 3.84 
+            xmin = 3.85 
             xmax = 3.9 
             text = "v" 
         intervals [33]:

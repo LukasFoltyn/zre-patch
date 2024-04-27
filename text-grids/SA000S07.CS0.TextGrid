@@ -26,14 +26,14 @@ item []:
             text = "nerzvózně" 
         intervals [4]:
             xmin = 2.45 
-            xmax = 2.7 
+            xmax = 2.69 
             text = "jsem" 
         intervals [5]:
-            xmin = 2.7 
-            xmax = 2.84 
+            xmin = 2.69 
+            xmax = 2.85 
             text = "jej" 
         intervals [6]:
-            xmin = 2.84 
+            xmin = 2.85 
             xmax = 3.42 
             text = "otevřel" 
         intervals [7]:
@@ -64,10 +64,10 @@ item []:
             text = "ɲ" 
         intervals [5]:
             xmin = 1.65 
-            xmax = 1.69 
+            xmax = 1.7 
             text = "ɛ" 
         intervals [6]:
-            xmin = 1.69 
+            xmin = 1.7 
             xmax = 1.79 
             text = "k" 
         intervals [7]:
@@ -96,10 +96,10 @@ item []:
             text = "ɛ" 
         intervals [13]:
             xmin = 2.64 
-            xmax = 2.7 
+            xmax = 2.69 
             text = "m" 
         intervals [14]:
-            xmin = 2.7 
+            xmin = 2.69 
             xmax = 2.75 
             text = "j" 
         intervals [15]:
@@ -108,10 +108,10 @@ item []:
             text = "ɛ" 
         intervals [16]:
             xmin = 2.78 
-            xmax = 2.84 
+            xmax = 2.85 
             text = "j" 
         intervals [17]:
-            xmin = 2.84 
+            xmin = 2.85 
             xmax = 2.94 
             text = "o" 
         intervals [18]:
@@ -132,10 +132,10 @@ item []:
             text = "r̝" 
         intervals [22]:
             xmin = 3.23 
-            xmax = 3.3 
+            xmax = 3.31 
             text = "ɛ" 
         intervals [23]:
-            xmin = 3.3 
+            xmin = 3.31 
             xmax = 3.42 
             text = "l" 
         intervals [24]:

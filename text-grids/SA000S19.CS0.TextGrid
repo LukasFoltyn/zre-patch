@@ -34,10 +34,10 @@ item []:
             text = "byl" 
         intervals [6]:
             xmin = 2.47 
-            xmax = 2.83 
+            xmax = 2.82 
             text = "útlum" 
         intervals [7]:
-            xmin = 2.83 
+            xmin = 2.82 
             xmax = 3.34 
             text = "způsoben" 
         intervals [8]:
@@ -50,10 +50,10 @@ item []:
             text = "odbytem" 
         intervals [10]:
             xmin = 4.37 
-            xmax = 4.8 
+            xmax = 4.79 
             text = "džinsu" 
         intervals [11]:
-            xmin = 4.8 
+            xmin = 4.79 
             xmax = 5.9375 
             text = "" 
     item [2]:
@@ -76,10 +76,10 @@ item []:
             text = "o" 
         intervals [4]:
             xmin = 1.67 
-            xmax = 1.73 
+            xmax = 1.72 
             text = "z" 
         intervals [5]:
-            xmin = 1.73 
+            xmin = 1.72 
             xmax = 1.79 
             text = "n" 
         intervals [6]:
@@ -88,10 +88,10 @@ item []:
             text = "a" 
         intervals [7]:
             xmin = 1.84 
-            xmax = 1.96 
+            xmax = 1.95 
             text = "tʃ" 
         intervals [8]:
-            xmin = 1.96 
+            xmin = 1.95 
             xmax = 2.08 
             text = "n" 
         intervals [9]:
@@ -116,14 +116,14 @@ item []:
             text = "ɪ" 
         intervals [14]:
             xmin = 2.34 
-            xmax = 2.4 
+            xmax = 2.39 
             text = "b" 
         intervals [15]:
-            xmin = 2.4 
-            xmax = 2.43 
+            xmin = 2.39 
+            xmax = 2.44 
             text = "ɪ" 
         intervals [16]:
-            xmin = 2.43 
+            xmin = 2.44 
             xmax = 2.47 
             text = "l" 
         intervals [17]:
@@ -132,10 +132,10 @@ item []:
             text = "uː" 
         intervals [18]:
             xmin = 2.61 
-            xmax = 2.7 
+            xmax = 2.69 
             text = "t" 
         intervals [19]:
-            xmin = 2.7 
+            xmin = 2.69 
             xmax = 2.73 
             text = "l" 
         intervals [20]:
@@ -144,14 +144,14 @@ item []:
             text = "u" 
         intervals [21]:
             xmin = 2.76 
-            xmax = 2.83 
+            xmax = 2.82 
             text = "m" 
         intervals [22]:
-            xmin = 2.83 
-            xmax = 2.9 
+            xmin = 2.82 
+            xmax = 2.89 
             text = "s" 
         intervals [23]:
-            xmin = 2.9 
+            xmin = 2.89 
             xmax = 2.98 
             text = "p" 
         intervals [24]:
@@ -164,14 +164,14 @@ item []:
             text = "s" 
         intervals [26]:
             xmin = 3.13 
-            xmax = 3.19 
+            xmax = 3.18 
             text = "o" 
         intervals [27]:
-            xmin = 3.19 
-            xmax = 3.23 
+            xmin = 3.18 
+            xmax = 3.22 
             text = "b" 
         intervals [28]:
-            xmin = 3.23 
+            xmin = 3.22 
             xmax = 3.26 
             text = "ɛ" 
         intervals [29]:
@@ -192,10 +192,10 @@ item []:
             text = "a" 
         intervals [33]:
             xmin = 3.57 
-            xmax = 3.65 
+            xmax = 3.64 
             text = "t" 
         intervals [34]:
-            xmin = 3.65 
+            xmin = 3.64 
             xmax = 3.69 
             text = "n" 
         intervals [35]:

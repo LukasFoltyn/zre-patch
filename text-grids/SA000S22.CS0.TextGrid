@@ -26,10 +26,10 @@ item []:
             text = "světla" 
         intervals [4]:
             xmin = 2.48 
-            xmax = 2.72 
+            xmax = 2.71 
             text = "hned" 
         intervals [5]:
-            xmin = 2.72 
+            xmin = 2.71 
             xmax = 2.81 
             text = "na" 
         intervals [6]:
@@ -50,10 +50,10 @@ item []:
             text = "drahokamy" 
         intervals [10]:
             xmin = 4.47 
-            xmax = 5.03 
+            xmax = 5.02 
             text = "dvojnásob" 
         intervals [11]:
-            xmin = 5.03 
+            xmin = 5.02 
             xmax = 5.51 
             text = "vynikly" 
         intervals [12]:
@@ -80,10 +80,10 @@ item []:
             text = "d" 
         intervals [4]:
             xmin = 1.77 
-            xmax = 1.84 
+            xmax = 1.83 
             text = "r" 
         intervals [5]:
-            xmin = 1.84 
+            xmin = 1.83 
             xmax = 1.89 
             text = "a" 
         intervals [6]:
@@ -100,10 +100,10 @@ item []:
             text = "m" 
         intervals [9]:
             xmin = 2.08 
-            xmax = 2.19 
+            xmax = 2.18 
             text = "s" 
         intervals [10]:
-            xmin = 2.19 
+            xmin = 2.18 
             xmax = 2.22 
             text = "v" 
         intervals [11]:
@@ -120,10 +120,10 @@ item []:
             text = "t" 
         intervals [14]:
             xmin = 2.35 
-            xmax = 2.43 
+            xmax = 2.42 
             text = "l" 
         intervals [15]:
-            xmin = 2.43 
+            xmin = 2.42 
             xmax = 2.48 
             text = "a" 
         intervals [16]:
@@ -140,10 +140,10 @@ item []:
             text = "ɛ" 
         intervals [19]:
             xmin = 2.64 
-            xmax = 2.72 
+            xmax = 2.71 
             text = "t" 
         intervals [20]:
-            xmin = 2.72 
+            xmin = 2.71 
             xmax = 2.75 
             text = "n" 
         intervals [21]:
@@ -188,10 +188,10 @@ item []:
             text = "ʃ" 
         intervals [31]:
             xmin = 3.44 
-            xmax = 3.47 
+            xmax = 3.48 
             text = "ɛ" 
         intervals [32]:
-            xmin = 3.47 
+            xmin = 3.48 
             xmax = 3.58 
             text = "ts" 
         intervals [33]:
@@ -280,30 +280,30 @@ item []:
             text = "o" 
         intervals [54]:
             xmin = 4.99 
-            xmax = 5.03 
+            xmax = 5.02 
             text = "p" 
         intervals [55]:
-            xmin = 5.03 
-            xmax = 5.1 
+            xmin = 5.02 
+            xmax = 5.09 
             text = "v" 
         intervals [56]:
-            xmin = 5.1 
-            xmax = 5.16 
+            xmin = 5.09 
+            xmax = 5.17 
             text = "ɪ" 
         intervals [57]:
-            xmin = 5.16 
+            xmin = 5.17 
             xmax = 5.23 
             text = "ɲ" 
         intervals [58]:
             xmin = 5.23 
-            xmax = 5.28 
+            xmax = 5.29 
             text = "ɪ" 
         intervals [59]:
-            xmin = 5.28 
-            xmax = 5.39 
+            xmin = 5.29 
+            xmax = 5.38 
             text = "k" 
         intervals [60]:
-            xmin = 5.39 
+            xmin = 5.38 
             xmax = 5.44 
             text = "l" 
         intervals [61]:
